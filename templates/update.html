@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}UPDATE
+    
+{% endblock title %}
+
+{% block body %}
+<div class="container mx-10 my-5">
+    <h2>Update ToDo</h2>
+  
+   <form action="/update/{{todo.srno}}" method="POST">
+
+<div class="mb-3">
+
+  <label for="todos" class="form-label">ToDos</label>
+  <input type="text" class="form-control" name="todos"value={{todo.todos}} id="todos" >
+  <div id="todos" class="form-text"></div>
+</div>
+<div class="mb-3">
+  <label for="desc" class="form-label">Description</label>
+  <input type="text" class="form-control" value="{{todo.desc}}" name="desc" id="desc">
+</div>
+
+<button type="submit" class="btn btn-outline-dark  my-2">UPDATE</button>
+</form>
+    </div>
+    
+{% endblock body %}
